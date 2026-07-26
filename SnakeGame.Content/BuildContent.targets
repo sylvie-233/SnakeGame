@@ -25,4 +25,15 @@
       </BundledResource>
     </ItemGroup>
   </Target>
+
+  <Target Name="CopyDesktopGLContentToPublish"
+    BeforeTargets="ComputeAndCopyFilesToPublishDirectory"
+    Condition="'$(MonoGamePlatform)' == 'DesktopGL'">
+    <ItemGroup>
+      <_ContentToPublish Include="$(ProjectDir)$(OutputPath)Content\**\*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_ContentToPublish)"
+          DestinationFolder="$(PublishDir)Content\%(_ContentToPublish.RecursiveDir)"
+          SkipUnchangedFiles="true" />
+  </Target>
 </Project>

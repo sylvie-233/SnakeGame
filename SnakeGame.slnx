@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="SnakeGame.Core/SnakeGame.Core.csproj" />
+  <Project Path="SnakeGame.Content/SnakeGame.Content.csproj" />
+  <Project Path="SnakeGame.Host/SnakeGame.Host.csproj" />
+</Solution>

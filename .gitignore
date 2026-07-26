@@ -1,0 +1,112 @@
+## Visual Studio
+.vs/
+# .vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.csproj.user
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+## Visual Studio cache/options
+.vs/
+.vsconfig
+.vs/settings.json
+
+## Visual Studio auto-generated files
+*.[Cc]ache
+!*.[Cc]ache/
+
+## Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+## Visual Studio / IIS Express
+.vs/
+.vs/settings.json
+.vs/VSWorkspaceState.json
+.vs/config/applicationhost.config
+
+## Visual Studio / Test
+.vs/
+.vs/settings.json
+TestResults/
+TestResults/**/LocalRun*.testsettings
+
+## Visual Studio / Publish
+.vs/
+.vs/settings.json
+Publish/
+
+## NuGet
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nupkg
+**/[Pp]ackages/**/lib/*
+snupkg
+**/[Aa]rtifacts/
+
+## NuGet cache
+packages/
+
+## dotnet CLI
+.dotnet/
+
+## MonoGame
+*.mgcb
+*.xnb (generated content)
+
+## OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+## macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+__MACOSX
+
+## Linux
+*~
+
+## JetBrains Rider
+.idea/
+*.sln.iml
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Build outputs
+*.exe
+*.dll
+*.pdb
+*.lib
+*.exp
+*.ilk
+*.tmp
+*.log
+*.tlog
+*.sbr
+*.[Cc]ache
+!*.[Cc]ache/
+
+## Generated content
+Content/**/*.xnb
+!Content/Font/*.spritefont

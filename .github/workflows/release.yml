@@ -1,0 +1,45 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            8.0.x
+            9.0.x
+
+      - name: Restore
+        run: dotnet restore SnakeGame.Host/SnakeGame.Host.csproj
+
+      - name: Publish
+        run: >
+          dotnet publish SnakeGame.Host/SnakeGame.Host.csproj
+          -c Release
+          -r win-x64
+          --self-contained true
+          -p:MonoGamePlatform=DesktopGL
+          -o publish
+
+      - name: Package
+        run: Compress-Archive -Path publish\* -DestinationPath SnakeGame-win-x64.zip
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: SnakeGame-win-x64.zip
+          generate_release_notes: true
